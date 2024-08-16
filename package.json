@@ -1,6 +1,6 @@
 {
   "name": "react-native-infinity-scroll-view",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ReactNative component for infinity scrolling",
   "main": "index.js",
   "scripts": {
