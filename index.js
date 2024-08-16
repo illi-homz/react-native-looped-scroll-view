@@ -1,1 +1,1 @@
-export { default } from './src/InfinitySlider';
+export { default as InfinitySlider } from './src/InfinitySlider';

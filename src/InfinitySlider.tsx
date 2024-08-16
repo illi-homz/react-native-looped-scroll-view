@@ -344,12 +344,11 @@ type InfinitySliderProps = {
   data: any[];
   pagingEnabled?: boolean;
   vivableCount: number;
-  onInit?(items?: any[]): void;
+  onInit?(items?: RenderItemValueType[]): void;
   onScrollStart?(): void;
-  onScrollEnd?(items?: any[]): void;
+  onScrollEnd?(items?: RenderItemValueType[]): void;
   renderItem(v: RenderItemValueType): ReactNode;
-  onViewableItemsChanged?(items: any[]): void;
-  onColibrate?(items: any[]): void;
+  onViewableItemsChanged?(items: RenderItemValueType[]): void;
   style?: StyleProp<ViewStyle>;
 };
 
