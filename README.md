@@ -1,6 +1,6 @@
 # react-native-infinity-scroll-view
 
-<img src="https://github.com/illi-homz/react-native-infinity-scroll-view/blob/main/demo/assets/react-native-infinity-scroll-view.gif?raw=true" width="350">
+<img src="https://github.com/illi-homz/demos/blob/main/react-native-infinity-scroll-view.gif?raw=true" width="350">
 <br>
 
 ## Installation
