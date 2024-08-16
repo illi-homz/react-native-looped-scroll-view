@@ -1,0 +1,25 @@
+{
+  "name": "react-native-infinity-scroll-view",
+  "version": "0.1.0",
+  "description": "ReactNative component for infinity scrolling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/illi-homz/react-native-infinity-scroll-view.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "infinity",
+    "scroll"
+  ],
+  "author": "gomzales",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/illi-homz/react-native-infinity-scroll-view/issues"
+  },
+  "homepage": "https://github.com/illi-homz/react-native-infinity-scroll-view#readme"
+}
