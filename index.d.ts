@@ -3,4 +3,4 @@
  * @created at 2024
  **/
 
-export { InfinitySlider } from './src/InfinitySlider';
+export {  default as InfinityScrollView } from './src/InfinityScrollView';

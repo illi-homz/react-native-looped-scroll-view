@@ -1,9 +1,9 @@
-import { StartTopSlideType, TopSlideType } from './types';
+import { StartTopItemType, TopItemType } from './types';
 
-export const getStartTopSlides = (
+export const getStartTopItems = (
   currentArray: any[],
   itemHeight: number,
-): StartTopSlideType[] => {
+): StartTopItemType[] => {
   return currentArray.map((_, idx) => {
     if (idx === 0) {
       return { top: -itemHeight };
@@ -13,11 +13,11 @@ export const getStartTopSlides = (
   });
 };
 
-export const getTopSlides = (
+export const getTopItems = (
   data: any[],
   currentArray: any[],
   itemHeight: number,
-): TopSlideType[] => {
+): TopItemType[] => {
   return currentArray.map((item, idx) => {
     if (idx === 0) {
       return {

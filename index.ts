@@ -1,1 +1,1 @@
-export { default as InfinitySlider } from './src/InfinitySlider';
+export { default as InfinityScrollView } from './src/InfinityScrollView';

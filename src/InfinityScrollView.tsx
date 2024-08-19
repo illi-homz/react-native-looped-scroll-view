@@ -7,10 +7,10 @@ import {
   PanGestureHandlerEventPayload,
 } from 'react-native-gesture-handler';
 import { runOnJS } from 'react-native-reanimated';
-import { RenderItemValueType, StartTopSlideType, TopSlideType } from './types';
-import { getStartTopSlides, getTopSlides } from './utils';
+import { RenderItemValueType, StartTopItemType, TopItemType } from './types';
+import { getStartTopItems, getTopItems } from './utils';
 
-const InfinitySlider: React.FC<InfinitySliderProps> = ({
+const InfinityScrollView: React.FC<InfinityScrollViewProps> = ({
   data,
   vivableCount,
   pagingEnabled = false,
@@ -28,10 +28,10 @@ const InfinitySlider: React.FC<InfinitySliderProps> = ({
     ...data.slice(0, vivableCount + 1),
   ];
 
-  const [topSlides, setTopSlides] = useState<TopSlideType[]>([]);
+  const [topSlides, setTopSlides] = useState<TopItemType[]>([]);
 
-  const startTopSlidesRef = useRef<StartTopSlideType[]>();
-  const topSlidesRef = useRef<TopSlideType[]>();
+  const startTopSlidesRef = useRef<StartTopItemType[]>();
+  const topSlidesRef = useRef<TopItemType[]>();
   const isInertiaAnimation = useRef(false);
   const sirectionForVivableSlidesRef = useRef<number | undefined>();
   const viewableItemsRef = useRef<any[] | undefined>();
@@ -47,8 +47,8 @@ const InfinitySlider: React.FC<InfinitySliderProps> = ({
   }, [containerHeight]);
 
   const initStartValues = () => {
-    startTopSlidesRef.current = getStartTopSlides(currentArray, itemHeight);
-    setTopSlides(getTopSlides(data, currentArray, itemHeight));
+    startTopSlidesRef.current = getStartTopItems(currentArray, itemHeight);
+    setTopSlides(getTopItems(data, currentArray, itemHeight));
 
     setTimeout(() => {
       saveTopSlides(0);
@@ -89,7 +89,7 @@ const InfinitySlider: React.FC<InfinitySliderProps> = ({
     const steps = 10;
     let newTranslationY = +translationY;
 
-    let topNode: TopSlideType;
+    let topNode: TopItemType;
 
     topSlidesRef.current?.forEach(item => {
       if (!topNode) topNode = item;
@@ -207,8 +207,8 @@ const InfinitySlider: React.FC<InfinitySliderProps> = ({
 
   const getNewTopSlides = (
     translationY: number,
-    oldData: TopSlideType[],
-  ): TopSlideType[] => {
+    oldData: TopItemType[],
+  ): TopItemType[] => {
     const newData = oldData.map((oldValue, idx) => {
       const startTop =
         (startTopSlidesRef.current?.[idx].top || 0) + translationY; // work
@@ -338,9 +338,9 @@ const InfinitySlider: React.FC<InfinitySliderProps> = ({
   );
 };
 
-export default InfinitySlider;
+export default InfinityScrollView;
 
-type InfinitySliderProps = {
+type InfinityScrollViewProps = {
   data: any[];
   pagingEnabled?: boolean;
   vivableCount: number;
