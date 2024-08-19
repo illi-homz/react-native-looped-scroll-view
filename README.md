@@ -16,11 +16,11 @@ $ yarn add react-native-infinity-scroll-view
 
 ## Usage
 ```javascript
-import { InfinitySlider } from 'react-native-infinity-scroll-view'
+import { InfinityScrollView } from 'react-native-infinity-scroll-view'
 ```
 
 ```javascript
-<InfinitySlider
+<InfinityScrollView
   data={[1,2,3,4,5,6,7,8,9]}
   renderItem={({ item }) => <View><Text>{item.toString()}</Text></View>}
   vivableCount={5}
@@ -36,7 +36,7 @@ import { InfinitySlider } from 'react-native-infinity-scroll-view'
 
 ## Options
 
-### InfinitySlider
+### InfinityScrollView
 
 | Props | Type | Desc | Required |
 | --- | --- | --- | --- |
