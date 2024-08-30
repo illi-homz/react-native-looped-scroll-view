@@ -1,5 +1,5 @@
 {
-  "name": "@gomzales/react-native-looped-scroll-view",
+  "name": "react-native-looped-scroll-view",
   "version": "0.1.0",
   "description": "ReactNative component for looped scrolling",
   "main": "index.ts",
