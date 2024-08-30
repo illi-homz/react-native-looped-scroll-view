@@ -10,7 +10,7 @@ import { runOnJS } from 'react-native-reanimated';
 import { RenderItemValueType, StartTopItemType, TopItemType } from './types';
 import { getStartTopItems, getTopItems } from './utils';
 
-const InfinityScrollView: React.FC<InfinityScrollViewProps> = ({
+const LoopedScrollView: React.FC<LoopedScrollViewProps> = ({
   data,
   vivableCount,
   pagingEnabled = false,
@@ -338,9 +338,9 @@ const InfinityScrollView: React.FC<InfinityScrollViewProps> = ({
   );
 };
 
-export default InfinityScrollView;
+export default LoopedScrollView;
 
-type InfinityScrollViewProps = {
+type LoopedScrollViewProps = {
   data: any[];
   pagingEnabled?: boolean;
   vivableCount: number;

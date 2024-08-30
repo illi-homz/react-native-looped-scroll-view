@@ -1,1 +1,1 @@
-export { default as InfinityScrollView } from './src/InfinityScrollView';
+export { default as LoopedScrollView } from './src/LoopedScrollView';
